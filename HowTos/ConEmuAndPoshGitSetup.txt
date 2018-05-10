@@ -1,0 +1,20 @@
+Prefer using git commands? Would you like a git bash with modern features such as: tabs, autocomplete, etc, with the ability to run powershell and git from the same prompt?
+
+Download and install ConEmu - https://conemu.github.io/
+Follow the instructions to Install PoshGit - https://github.com/dahlbyk/posh-git#installation
+TL;DR: Run in powershell: PowerShellGet\Install-Module posh-git -Scope CurrentUser
+
+Create a powershell profile using the following command: New-Item -path $profile -type file –force
+This will create a new file located at: C:\Users\*username*\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
+Open the newly created file and add the following lines (obviously changing the location to your dev folder):
+
+Import-Module posh-git
+set-location C:\development\
+
+Open ConEmu. Click the Menu button on the top right, and select Settings...
+Click "Startup" and select "Specified named task", and then select PowerShell (Admin) from the list of options.
+Finally, close ConEmu and reopen it.
+ 
+
+The end result is a combined powershell/git that automatically opens to your development location with all the modern features.

@@ -1,0 +1,39 @@
+# Starting a new repository
+git init
+git commit -m "Initial Commit"
+git remote add origin https://github.com/shammill/test.git
+git push -u origin master-
+
+
+
+# Starting A New Feature
+git checkout dev
+git pull
+git checkout -b ABC-123
+
+
+# Create a new branch, commit, then push new branch to remote.
+git checkout -b ABC-123
+git add .
+git commit -m "ABC-123: Implemented Feature"
+git push -u origin ABC-123
+
+
+# Rebase 
+git rebase origin/development
+
+# Merge
+git merge origin/development
+
+
+# Full flow for rebasing and merging feature branch into development branch
+git fetch
+git rebase origin/development
+git checkout development
+git merge origin/development
+git merge ABC-123
+git push origin development
+
+
+# Cherry Pick - git checkout the branch you want the commit cherry picked to then:
+git cherry-pick e2212f6df4b3f8f391756fa540698852f45f57d2
