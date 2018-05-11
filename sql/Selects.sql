@@ -17,6 +17,12 @@ SELECT TOP 1000 [AuditDate]
   AND [Changes] LIKE '%EntityId="352" EntityIdType="System.Int32"></Placement>%'
   AND [Changes] LIKE '%<DayAttended>true</DayAttended>%'
 
+  -- Select with a NOT Like
+  SELECT *
+  FROM [dbo].[ClientContacts]
+  Where Type = 'Company'
+  AND LastName NOT LIKE '%pty%'
+
 
 -- Select Distinct Example
 SELECT DISTINCT TV.[TestCentreId]

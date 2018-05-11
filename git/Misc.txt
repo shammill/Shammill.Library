@@ -37,3 +37,8 @@ git push origin development
 
 # Cherry Pick - git checkout the branch you want the commit cherry picked to then:
 git cherry-pick e2212f6df4b3f8f391756fa540698852f45f57d2
+
+
+
+
+git remote update origin --prune
