@@ -24,7 +24,6 @@ public class FizzBuzz
 
     public void FizzBuzzUsingOutput()
     {
-
         int numbers = 100;
         for (int i = 1; i <= numbers; i++)
         {
@@ -36,10 +35,9 @@ public class FizzBuzz
             if (i % 5)
                 output += "Buzz";
 
-            if (output != "")
-                Console.WriteLine(output);
-            else
-                Console.WriteLine(i.ToString());
+            output = output != "" ? output : i.ToString;
+
+            Console.WriteLine(output);
         }
     }
 
