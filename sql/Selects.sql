@@ -14,14 +14,16 @@ SELECT TOP 1000 [AuditDate]
       ,[RelatedEntityId]
   FROM [Prod].[dbo].[AuditLog]
   WHERE EntityTypeId = 74
-  AND [Changes] LIKE '%EntityId="352" EntityIdType="System.Int32"></Placement>%'
+  AND [Changes] LIKE '%EntityId="352" EntityIdType="System.Int32">%'
   AND [Changes] LIKE '%<DayAttended>true</DayAttended>%'
+
 
   -- Select with a NOT Like
   SELECT *
   FROM [dbo].[ClientContacts]
   Where Type = 'Company'
   AND LastName NOT LIKE '%pty%'
+
 
 
 -- Select Distinct Example
@@ -48,3 +50,26 @@ SELECT t.TestApplicationId, Count(t.TestApplicationId) FROM Test t (NOLOCK) WHER
 AND t.DateOfTest >= GETUTCDATE()
 GROUP BY t.TestApplicationId
 HAVING Count(t.TestApplicationId) > 1
+
+
+
+-- Selecting a column of XML, and selecting within that. This one is really useful. :)
+BEGIN
+DECLARE @change XML;
+
+Set @change = (SELECT TOP 1 [Changes]
+  FROM [Prod].[dbo].[AuditLog]
+  WHERE EntityTypeId = 74
+  And Operation = 4 --Delete Operation
+  AND [Changes] LIKE '%EntityId="576" EntityIdType="System.Int32">'
+  AND [Changes] LIKE '%<ScheduleDate>2017-05-16T00:00:00</ScheduleDate>%'
+ORDER BY AuditDate DESC);
+
+SELECT @change
+SELECT @change.value('(/AuditLog//ActualStartTime)[1]', 'varchar(max)')
+SELECT @change.value('(/AuditLog//ActualEndTime)[1]', 'varchar(max)')
+SELECT @change.value('(/AugitLog/ScheduleDate)[1]', 'varchar(max)')
+SELECT SUBSTRING(@change.value('(/ScheduleDate)[1]', 'varchar(max)'), 1, 17);
+end
+
+

@@ -1,0 +1,1 @@
+Copy-Item ./version.txt ./.git/hooks/version.txt
