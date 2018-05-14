@@ -1,22 +1,23 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DataStructures
 {
-	public void DataStructures
-	{
+    public void DataStructures
+    {
 
     }
 
     // List
     public void ListImplementations()
-	{
-		// Basic new List
-		List<string> newStringList1 = new List<String>();
-		
-		// New List with default values
-		List<string> newStringList2 = new List<String> {"string1", "hello", "world"};
-	}
+    {
+        // Basic new List
+        List<string> newStringList1 = new List<String>();
+
+        // New List with default values
+        List<string> newStringList2 = new List<String> { "string1", "hello", "world" };
+    }
 
     // Dictionary
     public void DictionaryImplementations()
@@ -28,7 +29,7 @@ public class DataStructures
         Console.WriteLine(dict1[1]);
 
         // New Dictionary with default values
-        IDictionary<int, string> dict2 = new Dictionary<int, string>() { {1,"One"}, {2, "Two"}, {3,"Three"} };
+        IDictionary<int, string> dict2 = new Dictionary<int, string>() { { 1, "One" }, { 2, "Two" }, { 3, "Three" } };
 
         // Looping through a dictionary with foreach
         foreach (KeyValuePair<int, string> item in dict2)
@@ -66,6 +67,14 @@ public class DataStructures
     }
 
 
+    //HashSet - Efficient Lookups
+    public void HashSetImplementation()
+    {
+        HashSet<int> hash = new HashSet<int>();
+        hash.Add(1);
+        bool hasThing = hash.Contains(1);
+
+    }
 
 
 }
