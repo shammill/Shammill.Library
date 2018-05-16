@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="csharp\challenges\FizzBuzz.cs" />
     <Compile Include="csharp\DataStructures.cs" />
+    <Compile Include="csharp\Enums.cs" />
     <Compile Include="csharp\Loops.cs" />
     <Compile Include="csharp\oop\InterfaceExample.cs" />
     <Compile Include="csharp\Other.cs" />
@@ -70,6 +71,5 @@
     <Content Include="sql\Triggers.sql" />
     <Content Include="sql\Updates.sql" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
