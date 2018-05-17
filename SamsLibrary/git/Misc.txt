@@ -42,3 +42,7 @@ git cherry-pick e2212f6df4b3f8f391756fa540698852f45f57d2
 
 
 git remote update origin --prune
+
+
+// There is a better version I made, but I cant find it atm.
+git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -20
