@@ -71,5 +71,8 @@
     <Content Include="sql\Triggers.sql" />
     <Content Include="sql\Updates.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
