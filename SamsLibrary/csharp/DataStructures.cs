@@ -26,9 +26,11 @@ namespace SamsLibrary
         public void DictionaryImplementations()
         {
             // Basic new Dictionary
-            IDictionary<int, string> dict1 = new Dictionary<int, string>();
-            dict1.Add(1, "One");
-            dict1.Add(2, "Two");
+            IDictionary<int, string> dict1 = new Dictionary<int, string>
+            {
+                { 1, "One" },
+                { 2, "Two" }
+            };
             Console.WriteLine(dict1[1]);
 
             // New Dictionary with default values
@@ -73,8 +75,10 @@ namespace SamsLibrary
         //HashSet - Efficient Lookups
         public void HashSetImplementation()
         {
-            HashSet<int> hash = new HashSet<int>();
-            hash.Add(1);
+            HashSet<int> hash = new HashSet<int>
+            {
+                1
+            };
             bool hasThing = hash.Contains(1);
 
         }
