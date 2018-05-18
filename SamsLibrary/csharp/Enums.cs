@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SamsLibrary.csharp
 {
-    public static class Enums
+    public static class StaticEnums
     {
 
         public enum MyEnum
@@ -46,6 +46,23 @@ namespace SamsLibrary.csharp
 
             return description;
         }
+    }
+
+    public class Enums
+    {
+        public enum TheEnum
+        {
+            [Description("Tester")]
+            Test,
+        }
+
+        public Enums()
+        {
+            TheEnum enumer = TheEnum.Test;
+            var description = StaticEnums.MyEnum.Employee.GetDescription();
+            var description2 = enumer.GetDescription();
+        }
+
     }
 
     // usually you'll get this from using System.ComponentModel; or using System.ComponentModel.Primatives; but that wasn't working.
