@@ -17,7 +17,7 @@ namespace SamsLibrary
     public class Other
     {
         // Using above extension method.
-        public string ExtensionMethodExample(string val)
+        public string ExtensionMethodExample()
         {
             string testString = "SamsTheBest!";
             return testString.SamsToLower();
