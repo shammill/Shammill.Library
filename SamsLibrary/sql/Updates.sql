@@ -4,6 +4,13 @@ FROM [TestSession] TS
 INNER JOIN TestCentreLocationFee TF 
 ON TF.TestCentreLocationId = TS.TestCentreLocationId
 
+UPDATE [MatterExtras]
+SET [MatterExtras].[MatterExtra_MasterExtra] = MasterE.Id
+FROM [MatterExtras] Extra
+INNER JOIN MasterExtras MasterE 
+ON MasterE.temp_MatterExtraId = Extra.Id
+
+
 UPDATE TEST
 SET TestApplicationId=NULL,ReservationExpiryDate=NULL,TestStatusId=1
 WHERE TestApplicationId=4323793;
