@@ -60,12 +60,16 @@
     <Compile Include="csharp\Enums.cs" />
     <Compile Include="csharp\Loops.cs" />
     <Compile Include="csharp\oop\InterfaceExample.cs" />
+    <Compile Include="csharp\Conditionals.cs" />
     <Compile Include="csharp\Other.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="git\hooks\version.txt" />
     <Content Include="git\Misc.txt" />
     <Content Include="guides\ConEmuAndPoshGitSetup.txt" />
+    <Content Include="sql\AlterTables.sql" />
+    <Content Include="sql\ComplexTasks.sql" />
+    <Content Include="sql\Inserts.sql" />
     <Content Include="sql\Selects.sql" />
     <Content Include="sql\StoredProceedues.sql" />
     <Content Include="sql\Triggers.sql" />
