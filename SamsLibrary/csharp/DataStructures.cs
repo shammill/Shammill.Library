@@ -5,6 +5,15 @@ using System.Linq;
 
 namespace SamsLibrary
 {
+    public static class StaticDataStructures
+    {
+        public static bool IsNullOrEmpty<T>(this IEnumerable<T> list)
+        {
+            return (list == null || list.Count() == 0);
+        }
+
+    }
+
     public class DataStructures
     {
         public DataStructures()
@@ -17,6 +26,7 @@ namespace SamsLibrary
         {
             // Basic new List
             List<string> newStringList1 = new List<String>();
+            newStringList1.IsNullOrEmpty();
 
             // New List with default values
             List<string> newStringList2 = new List<String> { "string1", "hello", "world" };

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,6 +46,26 @@ namespace SamsLibrary.csharp
             }
 
             return description;
+        }
+
+        // New Untested
+        public static string GetDescription(this Enum enumeration)
+        {
+            Type type = enumeration.GetType();
+            MemberInfo[] enumMemberInfo = type.GetMember(enumeration.ToString());
+
+            if (!enumMemberInfo.Any())
+            {
+                return enumeration.ToString();
+            }
+
+            object[] attributes = enumMemberInfo.First().GetCustomAttributes(typeof(DescriptionAttribute), false);
+            if (attributes.Any())
+            {
+                return ((DescriptionAttribute)attributes.First()).Description;
+            }
+
+            return enumeration.ToString();
         }
     }
 

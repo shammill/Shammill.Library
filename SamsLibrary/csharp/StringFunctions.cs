@@ -4,6 +4,16 @@ using System.Collections.Generic;
 
 namespace SamsLibrary
 {
+    public static class StaticStringFunctions
+    {
+        // This already exists as String.IsNullOrEmpty(val), but val.IsNullOrEmpty() flows a lot better.
+        public static bool IsNullOrEmpty(this string value)
+        {
+            return (value == null || value != string.Empty);
+        }
+    }
+
+
     public class StringFunctions
     {
         public StringFunctions()
