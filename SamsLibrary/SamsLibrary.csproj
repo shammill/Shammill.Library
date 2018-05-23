@@ -49,6 +49,7 @@
     <None Include="git\hooks\pre-rebase.sample" />
     <None Include="git\hooks\prepare-commit-msg.sample" />
     <None Include="git\hooks\update.sample" />
+    <None Include="packages.config" />
     <None Include="powershell\build.ps1" />
     <None Include="powershell\clean.ps1" />
     <None Include="powershell\CompileViews.ps1" />
@@ -58,6 +59,8 @@
     <Compile Include="csharp\challenges\FizzBuzz.cs" />
     <Compile Include="csharp\ConvertFunctions.cs" />
     <Compile Include="csharp\FileFunctions.cs" />
+    <Compile Include="csharp\DateFunctions.cs" />
+    <Compile Include="csharp\WebFunctions.cs" />
     <Compile Include="csharp\StringFunctions.cs" />
     <Compile Include="csharp\DataStructures.cs" />
     <Compile Include="csharp\Enums.cs" />
@@ -79,7 +82,11 @@
     <Content Include="sql\Updates.sql" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
