@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="csharp\challenges\FizzBuzz.cs" />
+    <Compile Include="csharp\ConvertFunctions.cs" />
+    <Compile Include="csharp\FileFunctions.cs" />
     <Compile Include="csharp\StringFunctions.cs" />
     <Compile Include="csharp\DataStructures.cs" />
     <Compile Include="csharp\Enums.cs" />
