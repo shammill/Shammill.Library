@@ -87,7 +87,7 @@ namespace SamsLibrary
             string filePath = Path.GetDirectoryName(inputFile);
             string fileName = Path.GetFileNameWithoutExtension(inputFile);
             string fileExtension = Path.GetExtension(inputFile);
-            string outputFile = String.Format("{0}\\{1}{3}", filePath, fileName, fileExtension);
+            string outputFile = String.Format("{0}\\{1}{2}", filePath, fileName, fileExtension);
 
             return outputFile;
         }

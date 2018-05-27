@@ -18,5 +18,23 @@ namespace SamsLibrary
                 sum += i;
             }
         }
+
+        public void StandardWhileLoop()
+        {
+            int number = 100;
+            while (number > 0)
+            {
+                number--;
+            }
+        }
+
+        public void RecursiveLoop(int number)
+        {
+            if (number > 0)
+            {
+                number--;
+                RecursiveLoop(number);
+            }
+        }
     }
 }
