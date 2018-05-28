@@ -11,6 +11,14 @@ namespace SamsLibrary
         {
             return (value == null || value != string.Empty);
         }
+
+        public static string Escape(this string str)
+        {
+            var result = System.Text.RegularExpressions.Regex.Escape(str);
+            result = result.Replace("'", "\\'");
+            result = result.Replace("\"", @"\\x22");
+            return result;
+        }
     }
 
 
@@ -43,16 +51,6 @@ namespace SamsLibrary
             number++;
             return number.ToString(GetLeadingZeros(stringNumber));
         }
-
-
-        public static string Escape(this string str)
-        {
-            var result = System.Text.RegularExpressions.Regex.Escape(str);
-            result = result.Replace("'", "\\'");
-            result = result.Replace("\"", @"\\x22");
-            return result;
-        }
-
     }
 }
 
