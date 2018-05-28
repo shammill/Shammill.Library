@@ -37,16 +37,13 @@ namespace ListResolutions
     class Program
     {
         [DllImport("user32.dll")]
-        public static extern bool EnumDisplaySettings(
-              string deviceName, int modeNum, ref DEVMODE devMode);
+        public static extern bool EnumDisplaySettings(string deviceName, int modeNum, ref DEVMODE devMode);
         const int ENUM_CURRENT_SETTINGS = -1;
-
         const int ENUM_REGISTRY_SETTINGS = -2;
 
         [StructLayout(LayoutKind.Sequential)]
         public struct DEVMODE
         {
-
             private const int CCHDEVICENAME = 0x20;
             private const int CCHFORMNAME = 0x20;
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
