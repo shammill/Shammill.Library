@@ -28,6 +28,9 @@ namespace SamsLibrary
             int height = bounds.Height;
 
             Rectangle workingArea = mainscreen.WorkingArea; // resolution minus taskbar, etc.
+
+            var size1 = SystemInformation.PrimaryMonitorSize;
+            var size2 = SystemInformation.PrimaryMonitorMaximizedWindowSize;
         }
     }
 }
