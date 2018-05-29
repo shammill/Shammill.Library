@@ -56,8 +56,12 @@
     <None Include="powershell\mergeuphack.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="csharp\challenges\FizzBuzz.cs" />
+    <Compile Include="csharp\Algorithms\Dijkstras.cs" />
+    <Compile Include="csharp\Challenges\FizzBuzz.cs" />
+    <Compile Include="csharp\Converters\ByteArrayConverter.cs" />
     <Compile Include="csharp\ConvertFunctions.cs" />
+    <Compile Include="csharp\DataStructures\ArrayExtensions.cs" />
+    <Compile Include="csharp\BoolExtensions.cs" />
     <Compile Include="csharp\FileFunctions.cs" />
     <Compile Include="csharp\DateFunctions.cs" />
     <Compile Include="csharp\ScreenFunctions.cs">
@@ -65,10 +69,10 @@
     </Compile>
     <Compile Include="csharp\WebFunctions.cs" />
     <Compile Include="csharp\StringFunctions.cs" />
-    <Compile Include="csharp\DataStructures.cs" />
+    <Compile Include="csharp\DataStructures\DataStructures.cs" />
     <Compile Include="csharp\Enums.cs" />
     <Compile Include="csharp\Loops.cs" />
-    <Compile Include="csharp\oop\InterfaceExample.cs" />
+    <Compile Include="csharp\OOP\InterfaceExample.cs" />
     <Compile Include="csharp\Conditionals.cs" />
     <Compile Include="csharp\Other.cs" />
   </ItemGroup>
