@@ -11,7 +11,42 @@ namespace SamsLibrary
     {
         public ScreenFunctions()
         {
-            IDictionary screenNames = new Dictionary<int, string>();
+            var size1 = SystemInformation.PrimaryMonitorSize;
+            var size2 = SystemInformation.PrimaryMonitorMaximizedWindowSize;
+        }
+
+        /// <summary> 
+        /// WorkingArea = resolution minus taskbar, etc. 
+        /// </summary>
+        public Rectangle GetWorkingArea()
+        {
+            return Screen.PrimaryScreen.WorkingArea;
+        }
+
+
+        public Size GetScreenResolutionHeightWidth()
+        {
+            return new Size { Height = Screen.PrimaryScreen.Bounds.Height, Width = Screen.PrimaryScreen.Bounds.Width };
+        }
+
+        public Rectangle GetScreenResolutionRectangle()
+        {
+            return Screen.PrimaryScreen.Bounds;
+        }
+
+        public int GetScreenResolutionWidth()
+        {
+            return Screen.PrimaryScreen.Bounds.Width;
+        }
+
+        public int GetScreenResolutionHeight()
+        {
+            return Screen.PrimaryScreen.Bounds.Height;
+        }
+
+        public Dictionary<int, string> GetScreensIntName()
+        {
+            Dictionary<int, string> screenNames = new Dictionary<int, string>();
             Screen[] screens = Screen.AllScreens;
 
             int index = 0;
@@ -21,20 +56,18 @@ namespace SamsLibrary
                 index++;
             }
 
-            var mainscreen = Screen.PrimaryScreen;
-
-            Rectangle bounds = mainscreen.Bounds; // screen resolution.
-            int width = bounds.Width;
-            int height = bounds.Height;
-
-            Rectangle workingArea = mainscreen.WorkingArea; // resolution minus taskbar, etc.
-
-            var size1 = SystemInformation.PrimaryMonitorSize;
-            var size2 = SystemInformation.PrimaryMonitorMaximizedWindowSize;
+            return screenNames;
         }
+
+
+
+
     }
 }
 
+/// <summary>
+/// Gets supported resolutions and other data.
+/// </summary>
 namespace ListResolutions
 {
     class Program
