@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SamsLibrary.csharp.Experiments.RPG.Models
 {
-    interface IGameObject
+    public abstract class GameObject
     {
-        
+        //todo:
+        // add Position
     }
 }

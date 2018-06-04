@@ -11,8 +11,9 @@ namespace SamsLibrary.csharp.Experiments.RPG.Models.Actors
         public Goblin()
         {
             Health = 5;
-            DamageReduction = 0;
-            Speed = 5;
+            BaseDamageReduction = 0;
+            BaseSpeed = 5;
+            CanDie = true;
             IsAlive = true;
             IsInvulnerable = false;
             IsMobile = true;
