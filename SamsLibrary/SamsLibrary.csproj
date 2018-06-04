@@ -62,6 +62,10 @@
     <Compile Include="csharp\ConvertFunctions.cs" />
     <Compile Include="csharp\DataStructures\ArrayExtensions.cs" />
     <Compile Include="csharp\BoolExtensions.cs" />
+    <Compile Include="csharp\Experiments\RPG\Models\Actors\Goblin.cs" />
+    <Compile Include="csharp\Experiments\RPG\Models\Actor.cs" />
+    <Compile Include="csharp\Experiments\RPG\Models\IDestructible.cs" />
+    <Compile Include="csharp\Experiments\RPG\Models\GameObject.cs" />
     <Compile Include="csharp\FileFunctions.cs" />
     <Compile Include="csharp\DateFunctions.cs" />
     <Compile Include="csharp\ScreenFunctions.cs">
@@ -96,6 +100,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="csharp\Experiments\RPG\System\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
