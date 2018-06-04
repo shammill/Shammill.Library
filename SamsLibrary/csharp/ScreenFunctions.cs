@@ -26,7 +26,8 @@ namespace SamsLibrary
 
         public Size GetScreenResolutionHeightWidth()
         {
-            return new Size { Height = Screen.PrimaryScreen.Bounds.Height, Width = Screen.PrimaryScreen.Bounds.Width };
+            return Screen.PrimaryScreen.Bounds.Size;
+            //return new Size { Height = Screen.PrimaryScreen.Bounds.Height, Width = Screen.PrimaryScreen.Bounds.Width };
         }
 
         public Rectangle GetScreenResolutionRectangle()
