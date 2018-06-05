@@ -30,9 +30,9 @@ namespace SamsLibrary
 
 
     // Standard Implementing an Abstract Class that already has a DriveVehicle function implemented.
-    public abstract class AbstractVehicle
+    public abstract class AbstractVehicle : IVehicle
     {
-        void DriveVehicle()
+        public void DriveVehicle()
         {
             // Broom Broom!
         }
@@ -51,7 +51,7 @@ namespace SamsLibrary
         public string model;
         public string typeOfVehicle;
 
-        public void DriveVehicle()
+        public new void DriveVehicle()
         {
             // BrrrBroom!
         }
