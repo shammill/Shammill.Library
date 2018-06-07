@@ -71,6 +71,7 @@
     <Compile Include="csharp\ScreenFunctions.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="csharp\ScreenInterrogatory.cs" />
     <Compile Include="csharp\WebFunctions.cs" />
     <Compile Include="csharp\StringFunctions.cs" />
     <Compile Include="csharp\DataStructures\DataStructures.cs" />
