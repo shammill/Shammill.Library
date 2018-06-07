@@ -123,6 +123,7 @@ namespace ListResolutions
             int i = 0;
             while (EnumDisplaySettings(null, i, ref vDevMode))
             {
+                if (vDevMode.dmPelsWidth > 1080 && (1 << vDevMode.dmBitsPerPel) > 256)
                 Console.WriteLine("Width:{0} Height:{1} Color:{2} Frequency:{3}",
                                         vDevMode.dmPelsWidth,
                                         vDevMode.dmPelsHeight,
