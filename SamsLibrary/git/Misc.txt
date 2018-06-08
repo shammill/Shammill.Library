@@ -47,6 +47,6 @@ git remote update origin --prune
 // There is a better version I made, but I cant find it atm.
 git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -20
 
-
+// Can be run from Package Manager Console in VS
 Scaffold-DbContext "Server=tcp:127.0.0.1;Database=my-db;User Id=admin;Password=admin" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Model2 -Context "Context.cs" -DataAnnotations
 Scaffold-DbContext "Server=tcp:127.0.0.1,1433;Database=my-db;User Id=admin;Password=admin" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models2 -Context "Context" -Project SamsLibrary.Persistence -force
