@@ -92,6 +92,11 @@ namespace SamsLibrary
             return outputFile;
         }
 
+
+        public void GetAllFilesInPath(string path = "C:\\")
+        {
+            var allFiles = Directory.EnumerateFiles(path, "*", SearchOption.TopDirectoryOnly);
+        }
     }
 }
 
