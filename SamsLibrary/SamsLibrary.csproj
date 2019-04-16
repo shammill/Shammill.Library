@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="csharp\Algorithms\Dijkstras.cs" />
+    <Compile Include="csharp\Attributes.cs" />
     <Compile Include="csharp\Challenges\FizzBuzz.cs" />
     <Compile Include="csharp\Converters\ByteArrayConverter.cs" />
     <Compile Include="csharp\ConvertFunctions.cs" />
