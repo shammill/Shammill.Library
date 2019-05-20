@@ -10,6 +10,12 @@ namespace SamsLibrary
         {
 
         }
+
+
+        public int StringToInt(string value)
+        {
+            return Convert.ToInt32(value);
+        }
     }
 
     public class BoolToYesNoString
@@ -35,5 +41,7 @@ namespace SamsLibrary
             throw new NotImplementedException();
         }
     }
+
+
 }
 
