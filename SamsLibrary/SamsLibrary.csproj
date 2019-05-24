@@ -86,6 +86,7 @@
     <Content Include="git\hooks\version.txt" />
     <Content Include="git\Misc.txt" />
     <Content Include="guides\ConEmuAndPoshGitSetup.txt" />
+    <Content Include="sql\Other.sql" />
     <Content Include="sql\AlterTables.sql" />
     <Content Include="sql\ComplexTasks.sql" />
     <Content Include="sql\Inserts.sql" />
