@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace SamsLibrary.csharp.Experiments.LobbyProject.Models
 {
-    public class Lobby
+    public class CreateLobbyRequest
     {
-        public Guid id;
+        Guid playerId;
+
         public string name;
-        public List<Player> players;
 
         public int maximumSize;
         public bool isPublic;
         public bool isJoinable;
-        public bool hasGameInProgress;
-        public int gameId;
+        public  bool hasGameInProgress;
 
         // useful for filters
         public RegionEnum region;

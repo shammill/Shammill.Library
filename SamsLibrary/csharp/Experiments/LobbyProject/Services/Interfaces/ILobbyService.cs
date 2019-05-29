@@ -9,12 +9,15 @@ namespace SamsLibrary.csharp.Experiments.LobbyProject.Services.Interfaces
 {
     public interface ILobbyService
     {
-        Models.Lobby CreateLobby();
+        Models.Lobby CreateLobby(Player playerId);
         void DestroyLobby(Guid lobby);
+
+        Models.Lobby UpdateLobbyDetails(Lobby lobby);
 
         bool AddPlayerToLobby(Guid lobby, Player playerId);
         bool RemovePlayerFromLobby(Guid lobby, Player playerId);
+        bool ChangeLobbyLeader(Guid lobby, Player playerId);
 
-
+        List<Lobby> GetLobbies(LobbyFilter lobbyFilter);
     }
 }

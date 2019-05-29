@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace SamsLibrary.csharp.Experiments.LobbyProject.Models
 {
-    public class Player
+    public class LobbyFilter
     {
-        public Guid id;
-        public string name;
-        public bool isLobbyLeader;
+        public bool isPublic;
+        public bool hasGameInProgress;
+
+        // useful for filters
+        public RegionEnum region;
+        public string gameMode;
     }
 }
