@@ -43,7 +43,7 @@ namespace SamsLibrary.csharp.Experiments.RPG.Models
         {
             if (Health + healAmount >= MaxHealth)
                 Health = MaxHealth;
-            else
+            else if (Health > 0)
                 Health = Health + healAmount;
         }
         private void TakeDamage(double damageAmount)

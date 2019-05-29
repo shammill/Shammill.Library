@@ -63,6 +63,10 @@
     <Compile Include="csharp\ConvertFunctions.cs" />
     <Compile Include="csharp\DataStructures\ArrayExtensions.cs" />
     <Compile Include="csharp\BoolExtensions.cs" />
+    <Compile Include="csharp\Experiments\LobbyProject\Models\Lobby.cs" />
+    <Compile Include="csharp\Experiments\LobbyProject\Models\Player.cs" />
+    <Compile Include="csharp\Experiments\LobbyProject\Models\RegionEnum.cs" />
+    <Compile Include="csharp\Experiments\LobbyProject\Services\Interfaces\ILobbyService.cs" />
     <Compile Include="csharp\Experiments\RPG\Models\Actors\Goblin.cs" />
     <Compile Include="csharp\Experiments\RPG\Models\Actor.cs" />
     <Compile Include="csharp\Experiments\RPG\Models\Destructible.cs" />
@@ -105,6 +109,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="csharp\Experiments\LobbyProject\Controllers\" />
     <Folder Include="csharp\Experiments\RPG\System\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

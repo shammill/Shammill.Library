@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
+using System.Net.Sockets;
+using System.Net;
+using System.Text;
 
 namespace SamsLibrary
 {
@@ -37,6 +40,21 @@ namespace SamsLibrary
                 var obj = JsonConvert.DeserializeObject<string>(res);
             }
 
+        }
+
+        public async Task SendUDP()
+        {
+            Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram,
+            ProtocolType.Udp);
+
+            IPAddress serverAddr = IPAddress.Parse("192.168.2.255");
+
+            IPEndPoint endPoint = new IPEndPoint(serverAddr, 11000);
+
+            string text = "Hello";
+            byte[] send_buffer = Encoding.ASCII.GetBytes(text);
+
+            sock.SendTo(send_buffer, endPoint);
         }
     }
 }

@@ -9,6 +9,6 @@ namespace SamsLibrary.csharp.Experiments.RPG.Models
     public abstract class GameObject
     {
         //todo:
-        // add Position
+        // add Position Vector3, scale, etc. this class could be provided by engine already.
     }
 }
