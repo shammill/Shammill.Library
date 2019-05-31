@@ -9,7 +9,7 @@ namespace SamsLibrary.csharp.Experiments.LobbyProject.Services.Interfaces
 {
     public interface ILobbyService
     {
-        Models.Lobby CreateLobby(Player playerId);
+        Models.Lobby CreateLobby(CreateLobbyRequest lobbyRequest);
         void DestroyLobby(Guid lobby);
 
         Models.Lobby UpdateLobbyDetails(Lobby lobby);
