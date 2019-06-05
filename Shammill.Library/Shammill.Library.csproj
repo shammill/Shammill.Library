@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7D491E01-D76B-43B3-9449-E823D10A5681}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SamsLibrary</RootNamespace>
-    <AssemblyName>SamsLibrary</AssemblyName>
+    <RootNamespace>Shammill.Library</RootNamespace>
+    <AssemblyName>Shammill.Library</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -56,40 +56,40 @@
     <None Include="powershell\mergeuphack.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="csharp\Algorithms\Dijkstras.cs" />
-    <Compile Include="csharp\Attributes.cs" />
-    <Compile Include="csharp\Challenges\FizzBuzz.cs" />
-    <Compile Include="csharp\Converters\ByteArrayConverter.cs" />
-    <Compile Include="csharp\ConvertFunctions.cs" />
-    <Compile Include="csharp\DataStructures\ArrayExtensions.cs" />
-    <Compile Include="csharp\BoolExtensions.cs" />
-    <Compile Include="csharp\Experiments\LobbyProject\Models\Requests\LobbyFilter.cs" />
-    <Compile Include="csharp\Experiments\LobbyProject\Models\Lobby.cs" />
-    <Compile Include="csharp\Experiments\LobbyProject\Models\Player.cs" />
-    <Compile Include="csharp\Experiments\LobbyProject\Models\RegionEnum.cs" />
-    <Compile Include="csharp\Experiments\LobbyProject\Models\Requests\UpdateLobbyRequest.cs" />
-    <Compile Include="csharp\Experiments\LobbyProject\Models\Requests\CreateLobbyRequest.cs" />
-    <Compile Include="csharp\Experiments\LobbyProject\Services\LobbyService.cs" />
-    <Compile Include="csharp\Experiments\LobbyProject\Services\Interfaces\ILobbyService.cs" />
-    <Compile Include="csharp\Experiments\LobbyProject\Utilities\RegionStringToEnum.cs" />
-    <Compile Include="csharp\Experiments\RPG\Models\Actors\Goblin.cs" />
-    <Compile Include="csharp\Experiments\RPG\Models\Actor.cs" />
-    <Compile Include="csharp\Experiments\RPG\Models\Destructible.cs" />
-    <Compile Include="csharp\Experiments\RPG\Models\GameObject.cs" />
-    <Compile Include="csharp\FileFunctions.cs" />
-    <Compile Include="csharp\DateFunctions.cs" />
-    <Compile Include="csharp\ScreenFunctions.cs">
+    <Compile Include="c#\Algorithms\Dijkstras.cs" />
+    <Compile Include="c#\Attributes\Attributes.cs" />
+    <Compile Include="c#\CodingChallenges\FizzBuzz.cs" />
+    <Compile Include="c#\Converters\ByteArrayConverter.cs" />
+    <Compile Include="c#\ConvertFunctions.cs" />
+    <Compile Include="c#\DataStructures\ArrayExtensions.cs" />
+    <Compile Include="c#\Extensions\BoolExtensions.cs" />
+    <Compile Include="c#\Experiments\LobbyProject\Models\Requests\LobbyFilter.cs" />
+    <Compile Include="c#\Experiments\LobbyProject\Models\Lobby.cs" />
+    <Compile Include="c#\Experiments\LobbyProject\Models\Player.cs" />
+    <Compile Include="c#\Experiments\LobbyProject\Models\RegionEnum.cs" />
+    <Compile Include="c#\Experiments\LobbyProject\Models\Requests\UpdateLobbyRequest.cs" />
+    <Compile Include="c#\Experiments\LobbyProject\Models\Requests\CreateLobbyRequest.cs" />
+    <Compile Include="c#\Experiments\LobbyProject\Services\LobbyService.cs" />
+    <Compile Include="c#\Experiments\LobbyProject\Services\Interfaces\ILobbyService.cs" />
+    <Compile Include="c#\Experiments\LobbyProject\Utilities\RegionStringToEnum.cs" />
+    <Compile Include="c#\Experiments\RPG\Models\Actors\Goblin.cs" />
+    <Compile Include="c#\Experiments\RPG\Models\Actor.cs" />
+    <Compile Include="c#\Experiments\RPG\Models\Destructible.cs" />
+    <Compile Include="c#\Experiments\RPG\Models\GameObject.cs" />
+    <Compile Include="c#\FileFunctions.cs" />
+    <Compile Include="c#\DateFunctions.cs" />
+    <Compile Include="c#\ScreenFunctions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="csharp\ScreenInterrogatory.cs" />
-    <Compile Include="csharp\WebFunctions.cs" />
-    <Compile Include="csharp\StringFunctions.cs" />
-    <Compile Include="csharp\DataStructures\DataStructures.cs" />
-    <Compile Include="csharp\Enums.cs" />
-    <Compile Include="csharp\Loops.cs" />
-    <Compile Include="csharp\OOP\InterfaceExample.cs" />
-    <Compile Include="csharp\Conditionals.cs" />
-    <Compile Include="csharp\Other.cs" />
+    <Compile Include="c#\ScreenInterrogatory.cs" />
+    <Compile Include="c#\WebFunctions.cs" />
+    <Compile Include="c#\StringFunctions.cs" />
+    <Compile Include="c#\DataStructures\DataStructures.cs" />
+    <Compile Include="c#\Enums.cs" />
+    <Compile Include="c#\Loops.cs" />
+    <Compile Include="c#\OOP\InterfaceExample.cs" />
+    <Compile Include="c#\Conditionals.cs" />
+    <Compile Include="c#\Other.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="git\hooks\version.txt" />
@@ -113,10 +113,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="csharp\Experiments\LobbyProject\Controllers\" />
-    <Folder Include="csharp\Experiments\LobbyProject\Models\Responses\" />
-    <Folder Include="csharp\Experiments\RPG\System\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
