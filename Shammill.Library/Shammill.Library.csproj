@@ -63,15 +63,6 @@
     <Compile Include="c#\ConvertFunctions.cs" />
     <Compile Include="c#\DataStructures\ArrayExtensions.cs" />
     <Compile Include="c#\Extensions\BoolExtensions.cs" />
-    <Compile Include="c#\Experiments\LobbyProject\Models\Requests\LobbyFilter.cs" />
-    <Compile Include="c#\Experiments\LobbyProject\Models\Lobby.cs" />
-    <Compile Include="c#\Experiments\LobbyProject\Models\Player.cs" />
-    <Compile Include="c#\Experiments\LobbyProject\Models\RegionEnum.cs" />
-    <Compile Include="c#\Experiments\LobbyProject\Models\Requests\UpdateLobbyRequest.cs" />
-    <Compile Include="c#\Experiments\LobbyProject\Models\Requests\CreateLobbyRequest.cs" />
-    <Compile Include="c#\Experiments\LobbyProject\Services\LobbyService.cs" />
-    <Compile Include="c#\Experiments\LobbyProject\Services\Interfaces\ILobbyService.cs" />
-    <Compile Include="c#\Experiments\LobbyProject\Utilities\RegionStringToEnum.cs" />
     <Compile Include="c#\Experiments\RPG\Models\Actors\Goblin.cs" />
     <Compile Include="c#\Experiments\RPG\Models\Actor.cs" />
     <Compile Include="c#\Experiments\RPG\Models\Destructible.cs" />

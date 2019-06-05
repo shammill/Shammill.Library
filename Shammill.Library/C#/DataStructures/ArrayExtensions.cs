@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SamsLibrary.DataStructures
+namespace Shammill.Library.DataStructures
 {
     public static class ArrayExtensions
     {

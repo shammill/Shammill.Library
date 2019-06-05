@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace SamsLibrary
+namespace Shammill.Library
 {
     // Not that I ever forget these. 
     public class Loops

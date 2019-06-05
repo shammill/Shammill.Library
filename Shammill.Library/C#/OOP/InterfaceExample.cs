@@ -1,6 +1,6 @@
 using System;
 
-namespace SamsLibrary.OOP
+namespace Shammill.Library.OOP
 {
 
     // Standard Implementing an Interface

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-namespace SamsLibrary
+namespace Shammill.Library
 {
     public class FileFunctions
     {

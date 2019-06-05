@@ -55,9 +55,9 @@ HAVING Count(t.TestApplicationId) > 1
 
 -- Selecting a column of XML, and selecting within that. This one is really useful. :)
 BEGIN
-DECLARE @change XML;
+DECLARE @auditLogRecord XML;
 
-Set @change = (SELECT TOP 1 [Changes]
+Set @auditLogRecord = (SELECT TOP 1 [Changes]
   FROM [Prod].[dbo].[AuditLog]
   WHERE EntityTypeId = 74
   And Operation = 4 --Delete Operation
@@ -65,11 +65,11 @@ Set @change = (SELECT TOP 1 [Changes]
   AND [Changes] LIKE '%<ScheduleDate>2017-05-16T00:00:00</ScheduleDate>%'
 ORDER BY AuditDate DESC);
 
-SELECT @change
-SELECT @change.value('(/AuditLog//ActualStartTime)[1]', 'varchar(max)')
-SELECT @change.value('(/AuditLog//ActualEndTime)[1]', 'varchar(max)')
-SELECT @change.value('(/AugitLog/ScheduleDate)[1]', 'varchar(max)')
-SELECT SUBSTRING(@change.value('(/ScheduleDate)[1]', 'varchar(max)'), 1, 17);
+SELECT @auditLogRecord
+SELECT @auditLogRecord.value('(/AuditLog//ActualStartTime)[1]', 'varchar(max)')
+SELECT @auditLogRecord.value('(/AuditLog//ActualEndTime)[1]', 'varchar(max)')
+SELECT @auditLogRecord.value('(/AugitLog/ScheduleDate)[1]', 'varchar(max)')
+SELECT SUBSTRING(@auditLogRecord.value('(/ScheduleDate)[1]', 'varchar(max)'), 1, 17);
 end
 
 

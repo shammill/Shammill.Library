@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace SamsLibrary
+namespace Shammill.Library
 {
     public static class StaticOther
     {
@@ -14,7 +14,7 @@ namespace SamsLibrary
     }
 
 
-    public class Other
+    public class Usage
     {
         // Using above extension method.
         public string ExtensionMethodExample()

@@ -1,6 +1,6 @@
 using System;
 
-namespace SamsLibrary.CodingChallenges
+namespace Shammill.Library.CodingChallenges
 {
     public class FizzBuzz
     {

@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace SamsLibrary
+namespace Shammill.Library
 {
     public class ScreenFunctions : Form
     {
@@ -67,9 +67,9 @@ namespace SamsLibrary
 }
 
 /// <summary>
-/// Gets supported resolutions and other data.
+/// Gets supported screen resolutions and other data.
 /// </summary>
-namespace ListResolutions
+namespace Shammill.Library.ListResolutions
 {
     class Program
     {

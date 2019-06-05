@@ -2,8 +2,8 @@
 
 
 
--- Insert from one table to another
-INSERT INTO [dbo].[MasterExtras] (Name, Amount, temp_MatterExtraId)
+-- Insert from one table to another (creates master records where none exist for children)
+INSERT INTO [dbo].[Species] (Name, Amount)
 SELECT Name, Amount, Id
-FROM [dbo].[MatterExtras]
-WHERE IsMasterExtra = 1 AND MatterExtra_MasterExtra IS NULL;
+FROM [dbo].[Animals]
+WHERE IsAlive = 1 AND Species IS NULL;

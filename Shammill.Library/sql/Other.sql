@@ -1,4 +1,5 @@
-﻿-- find sessions
+﻿-- find sessions on an SQL server,
+-- good to find out if connections are being consumed when they shouldn't
 select count(*) as sessions,
      s.host_name,
      s.host_process_id,

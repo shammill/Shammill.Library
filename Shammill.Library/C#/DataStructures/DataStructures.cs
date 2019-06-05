@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SamsLibrary.DataStructures
+namespace Shammill.Library.DataStructures
 {
     public static class StaticDataStructures
     {

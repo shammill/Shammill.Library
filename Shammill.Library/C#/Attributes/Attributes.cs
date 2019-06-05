@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SamsLibrary.Attributes
+namespace Shammill.Library.Attributes
 {
 
     public class Security

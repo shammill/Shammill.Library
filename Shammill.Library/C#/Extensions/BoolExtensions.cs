@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SamsLibrary.Extensions
+namespace Shammill.Library.Extensions
 {
 
     public static class BoolExtensions

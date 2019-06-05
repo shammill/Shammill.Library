@@ -4,94 +4,97 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SamsLibrary.Algorithms
+namespace Shammill.Library.Algorithms
 {
     public class Dijkstras
     {
-        Dictionary<char, Dictionary<char, int>> vertices = new Dictionary<char, Dictionary<char, int>>();
-
-        public void AddVertex(char name, Dictionary<char, int> edges)
+        public class Graph
         {
-            vertices[name] = edges;
-        }
+            Dictionary<char, Dictionary<char, int>> vertices = new Dictionary<char, Dictionary<char, int>>();
 
-        public List<char> ShortestPath(char start, char finish)
-        {
-            var previous = new Dictionary<char, char>();
-            var distances = new Dictionary<char, int>();
-            var nodes = new List<char>();
-
-            List<char> path = null;
-
-            foreach (var vertex in vertices)
+            public void AddVertex(char name, Dictionary<char, int> edges)
             {
-                if (vertex.Key == start)
-                {
-                    distances[vertex.Key] = 0;
-                }
-                else
-                {
-                    distances[vertex.Key] = int.MaxValue;
-                }
-
-                nodes.Add(vertex.Key);
+                vertices[name] = edges;
             }
 
-            while (nodes.Count != 0)
+            public List<char> ShortestPath(char start, char finish)
             {
-                nodes.Sort((x, y) => distances[x] - distances[y]);
+                var previous = new Dictionary<char, char>();
+                var distances = new Dictionary<char, int>();
+                var nodes = new List<char>();
 
-                var smallest = nodes[0];
-                nodes.Remove(smallest);
+                List<char> path = null;
 
-                if (smallest == finish)
+                foreach (var vertex in vertices)
                 {
-                    path = new List<char>();
-                    while (previous.ContainsKey(smallest))
+                    if (vertex.Key == start)
                     {
-                        path.Add(smallest);
-                        smallest = previous[smallest];
+                        distances[vertex.Key] = 0;
+                    }
+                    else
+                    {
+                        distances[vertex.Key] = int.MaxValue;
                     }
 
-                    break;
+                    nodes.Add(vertex.Key);
                 }
 
-                if (distances[smallest] == int.MaxValue)
+                while (nodes.Count != 0)
                 {
-                    break;
-                }
+                    nodes.Sort((x, y) => distances[x] - distances[y]);
 
-                foreach (var neighbor in vertices[smallest])
-                {
-                    var alt = distances[smallest] + neighbor.Value;
-                    if (alt < distances[neighbor.Key])
+                    var smallest = nodes[0];
+                    nodes.Remove(smallest);
+
+                    if (smallest == finish)
                     {
-                        distances[neighbor.Key] = alt;
-                        previous[neighbor.Key] = smallest;
+                        path = new List<char>();
+                        while (previous.ContainsKey(smallest))
+                        {
+                            path.Add(smallest);
+                            smallest = previous[smallest];
+                        }
+
+                        break;
+                    }
+
+                    if (distances[smallest] == int.MaxValue)
+                    {
+                        break;
+                    }
+
+                    foreach (var neighbor in vertices[smallest])
+                    {
+                        var alt = distances[smallest] + neighbor.Value;
+                        if (alt < distances[neighbor.Key])
+                        {
+                            distances[neighbor.Key] = alt;
+                            previous[neighbor.Key] = smallest;
+                        }
                     }
                 }
+
+                return path;
             }
-
-            return path;
         }
-    }
 
-    class MainClass
-    {
-        public static void Main(string[] args)
+        class MainClass
         {
-            Graph g = new Graph();
-            g.AddVertex('A', new Dictionary<char, int>() { { 'B', 7 }, { 'C', 8 } });
-            g.AddVertex('B', new Dictionary<char, int>() { { 'A', 7 }, { 'F', 2 } });
-            g.AddVertex('C', new Dictionary<char, int>() { { 'A', 8 }, { 'F', 6 }, { 'G', 4 } });
-            g.AddVertex('D', new Dictionary<char, int>() { { 'F', 8 } });
-            g.AddVertex('E', new Dictionary<char, int>() { { 'H', 1 } });
-            g.AddVertex('F', new Dictionary<char, int>() { { 'B', 2 }, { 'C', 6 }, { 'D', 8 }, { 'G', 9 }, { 'H', 3 } });
-            g.AddVertex('G', new Dictionary<char, int>() { { 'C', 4 }, { 'F', 9 } });
-            g.AddVertex('H', new Dictionary<char, int>() { { 'E', 1 }, { 'F', 3 } });
+            public static void Main(string[] args)
+            {
+                Graph g = new Graph();
+                g.AddVertex('A', new Dictionary<char, int>() { { 'B', 7 }, { 'C', 8 } });
+                g.AddVertex('B', new Dictionary<char, int>() { { 'A', 7 }, { 'F', 2 } });
+                g.AddVertex('C', new Dictionary<char, int>() { { 'A', 8 }, { 'F', 6 }, { 'G', 4 } });
+                g.AddVertex('D', new Dictionary<char, int>() { { 'F', 8 } });
+                g.AddVertex('E', new Dictionary<char, int>() { { 'H', 1 } });
+                g.AddVertex('F', new Dictionary<char, int>() { { 'B', 2 }, { 'C', 6 }, { 'D', 8 }, { 'G', 9 }, { 'H', 3 } });
+                g.AddVertex('G', new Dictionary<char, int>() { { 'C', 4 }, { 'F', 9 } });
+                g.AddVertex('H', new Dictionary<char, int>() { { 'E', 1 }, { 'F', 3 } });
 
-            g.ShortestPath('A', 'H').ForEach(x => Console.WriteLine(x));
+                g.ShortestPath('A', 'H').ForEach(x => Console.WriteLine(x));
+            }
         }
     }
 }
-}
+

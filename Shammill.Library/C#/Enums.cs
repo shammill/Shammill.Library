@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SamsLibrary.csharp
+namespace Shammill.Library
 {
     public static class StaticEnums
     {
