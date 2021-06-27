@@ -60,13 +60,13 @@
     <Compile Include="c#\Attributes\Attributes.cs" />
     <Compile Include="c#\CodingChallenges\FizzBuzz.cs" />
     <Compile Include="c#\Converters\ByteArrayConverter.cs" />
-    <Compile Include="c#\ConvertFunctions.cs" />
     <Compile Include="c#\DataStructures\ArrayExtensions.cs" />
     <Compile Include="c#\Extensions\BoolExtensions.cs" />
     <Compile Include="c#\Experiments\RPG\Models\Actors\Goblin.cs" />
     <Compile Include="c#\Experiments\RPG\Models\Actor.cs" />
     <Compile Include="c#\Experiments\RPG\Models\Destructible.cs" />
     <Compile Include="c#\Experiments\RPG\Models\GameObject.cs" />
+    <Compile Include="c#\Regex\RegexExamples.cs" />
     <Compile Include="c#\FileFunctions.cs" />
     <Compile Include="c#\DateFunctions.cs" />
     <Compile Include="c#\ScreenFunctions.cs">
